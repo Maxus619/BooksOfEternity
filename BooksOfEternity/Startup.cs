@@ -38,6 +38,8 @@ namespace BooksOfEternity
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "BooksOfEternity" });
             });
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +61,11 @@ namespace BooksOfEternity
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("v1/swagger.json", "BooksOfEternity");
+            });
+
+            app.UseEndpoints(routes =>
+            {
+                routes.MapControllerRoute("default", "{controller=Home}/{action=Index}");
             });
         }
     }
