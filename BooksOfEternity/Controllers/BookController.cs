@@ -8,5 +8,10 @@ namespace BooksOfEternity.Controllers
         {
             return View("Index");
         }
+
+        public IActionResult Details(string bookId)
+        {
+            return View("Details");
+        }
     }
 }

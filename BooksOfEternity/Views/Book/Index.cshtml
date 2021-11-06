@@ -1,7 +1,51 @@
 ﻿@{
-      ViewData["Title"] = "Книги";
+    ViewData["Title"] = "Книги";
 }
 
+@* TODO: Убрать стиль из ссылок *@
 <div>
-      Books
+    <div class="card-deck book-group">
+        <div class="card book-card">
+            <a class="card-img-top book-image" asp-controller="Book" asp-action="Details" asp-route-bookId="1">
+                <div class="book-image-title"><b>Название книги</b></div>
+            </a>
+            <div class="card-body">
+                <a class="card-title text-decoration-none" asp-controller="Book" asp-action="Details" asp-route-bookId="1"><h5>Название книги</h5></a>
+                <p class="card-text">Описание</p>
+                <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+            </div>
+        </div>
+        <div class="card book-card">
+            <div class="card-img-top book-image" alt="Card image cap"></div>
+            <div class="card-body">
+                <h5 class="card-title">Название книги</h5>
+                <p class="card-text">Описание</p>
+                <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+            </div>
+        </div>
+        <div class="card book-card">
+            <div class="card-img-top book-image" alt="Card image cap"></div>
+            <div class="card-body">
+                <h5 class="card-title">Название книги</h5>
+                <p class="card-text">Описание</p>
+                <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+            </div>
+        </div>
+        <div class="card book-card">
+            <div class="card-img-top book-image" alt="Card image cap"></div>
+            <div class="card-body">
+                <h5 class="card-title">Название книги</h5>
+                <p class="card-text">Описание</p>
+                <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
